@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minds at Peace - Children's Counselling</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md py-6 text-center">
+        <img src="mindsatpeace_cover.jpg" alt="Minds at Peace Logo" class="mx-auto w-32">
+        <h1 class="text-3xl font-bold mt-2">Minds at Peace</h1>
+        <p class="text-gray-700">Helping children navigate emotions and build resilience</p>
+    </header>
+    
+    <nav class="bg-blue-600 text-white py-4 text-center">
+        <a href="#services" class="px-4">Services</a>
+        <a href="#about" class="px-4">About Us</a>
+        <a href="#testimonials" class="px-4">Testimonials</a>
+        <a href="#contact" class="px-4">Contact</a>
+    </nav>
+    
+    <section class="container mx-auto py-12 text-center bg-gray-100">
+        <h2 class="text-2xl font-semibold text-gray-800">Supporting Children's Mental Health</h2>
+        <p class="mt-4 max-w-xl mx-auto">We provide compassionate, professional counselling for children to help them develop emotional intelligence, resilience, and confidence.</p>
+        <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500">Book a Consultation</button>
+    </section>
+    
+    <section class="container mx-auto py-12 text-center bg-gray-200" x-data="{currentIndex: 0, images: ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg']}">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Environment</h2>
+        <div class="relative w-full overflow-hidden">
+            <div class="flex space-x-4 transition-transform duration-300" :style="'transform: translateX(-' + (currentIndex * 25) + '%)'">
+                <template x-for="image in images.slice(currentIndex, currentIndex + 4)" :key="image">
+                    <img :src="image" alt="Slideshow Image" class="w-1/4 h-48 object-cover rounded-lg shadow-md">
+                </template>
+            </div>
+            <button @click="currentIndex = Math.max(currentIndex - 1, 0)" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-md">&#10094;</button>
+            <button @click="currentIndex = Math.min(currentIndex + 1, images.length - 4)" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-md">&#10095;</button>
+        </div>
+    </section>
+    
+    <section id="about" class="container mx-auto py-12 text-center bg-gray-100">
+        <h2 class="text-2xl font-semibold text-gray-800">About Us</h2>
+        <p class="mt-4 max-w-xl mx-auto">Minds at Peace is dedicated to providing expert counselling services for children. Our licensed therapists create a safe and nurturing environment for young minds to grow.</p>
+    </section>
+    
+    <section id="testimonials" class="container mx-auto py-12 text-center bg-gray-200">
+        <h2 class="text-2xl font-semibold text-gray-800">What Parents Say</h2>
+        <div class="mt-6 max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <p class="italic">"Minds at Peace has been life-changing for our family. Our child has gained confidence and emotional strength thanks to their caring therapists."</p>
+            <p class="text-gray-600 mt-2">- Sarah, Parent</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="container mx-auto py-12 text-center bg-gray-100">
+        <h2 class="text-2xl font-semibold text-gray-800">Contact Us</h2>
+        <p class="mt-4">Have questions or want to book a session? Get in touch!</p>
+        <p class="text-gray-600 mt-2">Email: support@mindsatpeace.com | Phone: (123) 456-7890</p>
+        <button class="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-500">Send a Message</button>
+    </section>
+    
+    <footer class="bg-white shadow-md text-center py-4 text-gray-600">
+        <p>&copy; 2025 Minds at Peace. All rights reserved.</p>
+    </footer>
+</body>
+</html>
