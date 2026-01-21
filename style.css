@@ -8,7 +8,14 @@
 }
 
 header {
-    border-bottom: none !important;
+    background-color: var(--logo-navy) !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 3rem;
+}
+
+nav {
+    margin-top: 0 !important; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); 
 }
 
 .nav-link {
