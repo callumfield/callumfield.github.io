@@ -3,13 +3,23 @@
     --gold: #c5a059; 
 }
 
-.bg-header-navy {
+.bg-brand-navy {
     background-color: var(--logo-navy);
 }
 
 header {
     border-bottom: none !important;
 }
+
+.nav-link {
+    color: white !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
 /* Custom font applications */
 body { 
     font-family: 'Quicksand', sans-serif; 
