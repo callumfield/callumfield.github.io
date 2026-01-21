@@ -4,11 +4,11 @@
 }
 
 .bg-brand-navy {
-    background-color: var(--logo-navy);
+    background-color: var(--brand-navy);
 }
 
 header {
-    background-color: var(--logo-navy) !important;
+    background-color: var(--brand-navy) !important;
     margin-bottom: 0 !important;
     padding-bottom: 3rem;
 }
