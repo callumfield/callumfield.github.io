@@ -180,11 +180,14 @@ for growth, understanding, and positive change, one mindful step at a time.
 
                         <!-- Show Video if type is video -->
                         <template x-if="slide.type === 'video'">
-                            <video class="w-full h-full object-cover" 
-                                   autoplay 
-                                   muted 
-                                   loop 
-                                   playsinline>
+                            <video x-init="$el.play()" class="w-full h-full object-cover" 
+                                autoplay 
+                                muted 
+                                loop 
+                                playsinline
+                                webkit-playsinline
+                                preload="auto"
+                                poster="room1.jpg">>
                                 <source :src="slide.url" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
