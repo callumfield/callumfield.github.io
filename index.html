@@ -171,7 +171,7 @@ for growth, understanding, and positive change, one mindful step at a time.
                  :style="'transform: translateX(-' + (currentIndex * 100) + '%)'">
                 
                 <template x-for="(slide, index) in slides" :key="index">
-                    <div class="min-w-full h-[450px] flex items-center justify-center bg-slate-900">
+                    <div class="min-w-full aspect-square md:aspect-video flex items-center justify-center bg-slate-900">
                         
                         <!-- Show Image if type is image -->
                         <template x-if="slide.type === 'image'">
